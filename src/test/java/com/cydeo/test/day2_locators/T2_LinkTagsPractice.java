@@ -27,10 +27,26 @@ public class T2_LinkTagsPractice {
         //2 go to the url
         driver.get("https://practice.cydeo.com");
 
-        //3 find the web element
+        //3 find the web element //click it
 
-        driver.findElement(By.name("A/B Testing"));
+        driver.findElement(By.linkText("A/B Testing")).click();
 
-        //click it
+        //4 . make sure you are on the right page
 
-}}
+        System.out.println(driver.getTitle().equals("No A/B Test") ? "The page is correct" : "Wrong page");
+
+        //5 go back to main page
+
+        driver.navigate().back();
+
+        //6 check for title
+
+        System.out.println(driver.getTitle().equals("Practice")?"The title is correct":"Main page fail to return");
+
+        //7 close the browser
+
+        driver.quit();
+
+
+
+    }}
