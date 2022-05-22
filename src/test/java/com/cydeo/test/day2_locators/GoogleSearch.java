@@ -2,7 +2,6 @@ package com.cydeo.test.day2_locators;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -27,9 +26,9 @@ Expected: Title should start with “apple” word
         driver.get("https://google.com");
 
         //3 find the input cell//4 find the enter button
-        driver.findElement(By.tagName("input")).sendKeys("apple"+ Keys.ENTER);
+        driver.findElement(By.tagName("input")).sendKeys("apple");
 
-
+driver.findElement(By.className("gNO89b")).click();
         //5 check the title of the page
 
         System.out.println(driver.getTitle().startsWith("apple")?"The google got your search":"You messed up");
