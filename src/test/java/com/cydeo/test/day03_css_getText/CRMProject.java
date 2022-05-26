@@ -1,4 +1,4 @@
-package com.cydeo.test.day3_css_getText;
+package com.cydeo.test.day03_css_getText;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;

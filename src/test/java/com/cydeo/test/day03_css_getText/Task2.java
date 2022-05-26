@@ -1,10 +1,9 @@
-package com.cydeo.test.day3_css_getText;
+package com.cydeo.test.day03_css_getText;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+import com.cydeo.test.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Task2 {
     /*
@@ -18,9 +17,10 @@ public class Task2 {
   Expected: first name
      */
     public static void main(String[] args) {
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver=new ChromeDriver();
-        driver.manage().window().maximize();
+//        WebDriverManager.chromedriver().setup();
+//        WebDriver driver=new ChromeDriver();
+//        driver.manage().window().maximize();
+        WebDriver driver= WebDriverFactory.getDriver("Chrome");
 
         //2 navigate to page
         driver.get("https://practice.cydeo.com/registration_form");

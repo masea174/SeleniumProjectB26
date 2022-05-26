@@ -12,7 +12,7 @@ public class WebDriverFactory {
     public static WebDriver getDriver(String browserType){
         WebDriver driver;
         switch(browserType.toLowerCase()){
-            default:
+
             case"chrome":
             case "ch":
                 WebDriverManager.chromedriver().setup();
@@ -24,7 +24,10 @@ public class WebDriverFactory {
                 WebDriverManager.firefoxdriver().setup();
                 driver=new FirefoxDriver();
                 driver.manage().window().maximize();
-
+                break;
+            default:
+                System.out.println("Given driver type is not supported");
+                driver=null;
         }return driver;
     }
 // Static method
