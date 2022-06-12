@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 public class TestBase {
 
-   public WebDriver driver;
+   public static WebDriver driver;
     @BeforeMethod
    public void setUp() {
         driver = WebDriverFactory.getDriver("ch");
@@ -18,6 +18,6 @@ public class TestBase {
     }
     @AfterMethod
     public void breakDown (){
-        driver.close();
+        driver.quit();
     }
 }
