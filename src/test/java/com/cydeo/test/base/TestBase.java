@@ -1,5 +1,6 @@
 package com.cydeo.test.base;
 
+import com.cydeo.test.utilities.ConfigurationReader;
 import com.cydeo.test.utilities.WebDriverFactory;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
@@ -12,7 +13,7 @@ public class TestBase {
    public static WebDriver driver;
     @BeforeMethod
    public void setUp() {
-        driver = WebDriverFactory.getDriver("ch");
+        driver = WebDriverFactory.getDriver(ConfigurationReader.getProperty("browser"));
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 
     }

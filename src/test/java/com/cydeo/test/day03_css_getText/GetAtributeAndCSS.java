@@ -2,6 +2,7 @@ package com.cydeo.test.day03_css_getText;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -25,6 +26,7 @@ public class GetAtributeAndCSS {
 //    Log in” button text is as expected:
 //    Expected: Log In
         WebElement logingBtn= driver.findElement(By.cssSelector("input[type=\"submit\"]"));
+        logingBtn.sendKeys(""+ Keys.ENTER);
        String valueOfBtn= logingBtn.getAttribute("value");
         System.out.println(valueOfBtn.equals("Log In") ? "The Login button verification Passed" : "The Login button verification Failed");
 

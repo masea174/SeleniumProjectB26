@@ -35,5 +35,6 @@ public class T2SmartBearsOrder extends TestBase {
 //    12. Click on “Process”
 //    13. Verify success message “New order has been successfully added.”
 
+
 }
 }
