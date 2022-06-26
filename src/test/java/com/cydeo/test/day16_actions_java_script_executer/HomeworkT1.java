@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class HomeworkT1 {
 
     @Test
-    public void homework(){
+    public void homework() throws InterruptedException {
 //        TC #6: Scroll using JavascriptExecutor
 //        1- Open a chrome browser
 //        2- Go to: https://practice.cydeo.com/infinite_scroll
@@ -21,10 +21,11 @@ public class HomeworkT1 {
 //                b.  750 pixels up 10 times
         for (int i = 0; i < 10; i++) {
         js.executeScript("window.scroll(0,750)");
+        Thread.sleep(2000);
         }
-        for (int i = 10; i > 0; i--) {
-            js.executeScript("window.scroll(0,-750)");
-        }
+       // for (int i = 10; i > 0; i--) {
+      //      js.executeScript("window.scroll(0,-750)");
+       // }
 //        JavaScript method to use : window.scrollBy(0,0)
         Driver.closeDriver();
     }

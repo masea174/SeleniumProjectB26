@@ -28,10 +28,10 @@ public class Task5 {
 //        7. Click to Submit button
         dynamicallyLoadedPage1.submitBtn.click();
 //        8. Assert “Your password is invalid!” text is displayed.
-        wait.until(ExpectedConditions.visibilityOf(dynamicallyLoadedPage1.errorMessage));
+
        Assert.assertTrue( dynamicallyLoadedPage1.errorMessage.isDisplayed());
 
-        Assert.assertEquals(dynamicallyLoadedPage1.errorMessage.getText(),"Your password is invalid!");
+        Assert.assertTrue(dynamicallyLoadedPage1.errorMessage.getText().contains("Your password is invalid!"));
 //                Note: Follow POM Design Pattern
         Driver.closeDriver();
     }
