@@ -11,7 +11,7 @@ public class T1_MultipleWindows extends TestBase {
 
 
     @Test
-    public void windowHandlePractice() {
+    public void windowHandlePractice() throws InterruptedException {
 
 
 //    TC #2: Window Handle practice
@@ -33,10 +33,11 @@ public class T1_MultipleWindows extends TestBase {
                 break;
             }
         }
-
 // 5. Assert:Title contains“Etsy”
 //    Lines to be pasted:
         Assert.assertTrue(driver.getTitle().contains("Etsy"));
 //            These lines will simply open new tabs using something called JavascriptExecutor and get those pages. We will learn JavascriptExecutor later as well.
+
+        Thread.sleep(-20);
     }
 }
